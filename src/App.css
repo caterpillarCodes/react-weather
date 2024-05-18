@@ -1,8 +1,12 @@
+* {
+  font-family: "Lisu Bosa", serif;
+  color: #323a49;
+}
 .App-container {
   max-width: 680px;
   margin: 15px auto;
   background-color: rgb(199, 227, 170);
-  padding: 20px 60px;
+  padding: 40px 60px;
 }
 .row-daysforecast {
   display: flex;

@@ -4,7 +4,7 @@ form {
   justify-content: center;
 }
 .search-box {
-  width: 70%;
+  width: 100%;
   padding: 10px 15px;
   border: none;
   border-bottom: 2px solid white;
@@ -14,7 +14,7 @@ form {
 }
 .search-btn {
   text-align: center;
-  padding: 5px 8px;
+  padding: 5.5px 8px;
   color: rgb(255, 255, 255);
   font-size: 20px;
   border-bottom: 2px solid white;
