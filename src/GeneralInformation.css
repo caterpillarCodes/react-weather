@@ -1,0 +1,7 @@
+.GeneralInformation {
+  display: flex;
+  justify-content: space-between;
+}
+.CurrentHumidityWind {
+  display: flex;
+}
