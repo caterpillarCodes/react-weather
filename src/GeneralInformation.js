@@ -5,6 +5,7 @@ import { WiStrongWind } from "react-icons/wi";
 import "./GeneralInformation.css";
 
 export default function GeneralInformation(props) {
+  console.log(props.data.temperature);
   return (
     <div className="GeneralInformation">
       <div className="col">
@@ -16,7 +17,7 @@ export default function GeneralInformation(props) {
           size={90}
           animate={true}
         />
-        <p className="current-situation">Mostly cloudy</p>
+        <p className="current-situation">{props.description}</p>
       </div>
       <div className="col">
         <p className="current-temperature">

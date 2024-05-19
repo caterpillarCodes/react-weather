@@ -4,18 +4,19 @@ import { BsSearch } from "react-icons/bs";
 import axios from "axios";
 import GeneralInformation from "./GeneralInformation";
 export default function SearchEngine() {
-  const [city, setCity] = useState("");
-  const [objectData, setObjectData] = useState("");
+  const [city, setCity] = useState("tehran");
+  const [objectData, setObjectData] = useState({ flag: false });
   function updateWeatherData(response) {
     setObjectData({
+      flag: true,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: Math.round(response.data.main.humidity),
       wind: Math.round(response.data.wind.speed),
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      date: new Date(response.data.time * 1000),
+      city: response.data.name,
     });
-    console.log(response);
-    <GeneralInformation object={objectData} city={response.data.name} />;
   }
   function search() {
     let aipkey = "f09d3949047ab6c9e3bcaf79cf61f619";
@@ -31,18 +32,26 @@ export default function SearchEngine() {
     event.preventDefault();
     setCity(event.target.value);
   }
-  return (
-    <form className="SearchEngine" onSubmit={handleSubmit}>
-      <a className="search-btn" href="./">
-        <BsSearch />
-      </a>
-      <input
-        type="search"
-        className="search-box"
-        placeholder="Search for location..."
-        onChange={updateCity}
-        required
-      />
-    </form>
-  );
+  if (objectData.flag) {
+    return (
+      <div>
+        <form className="SearchEngine" onSubmit={handleSubmit}>
+          <a className="search-btn" href="./">
+            <BsSearch />
+          </a>
+          <input
+            type="search"
+            className="search-box"
+            placeholder="Search for location..."
+            onChange={updateCity}
+            required
+          />
+        </form>
+        <GeneralInformation data={objectData} />
+      </div>
+    );
+  } else {
+    search();
+    return <h1>loading....</h1>;
+  }
 }
