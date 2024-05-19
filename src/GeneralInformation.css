@@ -5,3 +5,30 @@
 .CurrentHumidityWind {
   display: flex;
 }
+.current-city {
+  font-size: 26px;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.current-date {
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 22px;
+}
+.current-situation {
+  font-size: 18px;
+}
+.current-temperature {
+  font-size: 92px;
+  margin-bottom: 0;
+  margin: 75px 30px 0 0;
+}
+.CurrentHumidityWind {
+  font-size: 20px;
+  margin: 0 36px;
+}
+p.wind {
+  margin-left: 16px;
+}

@@ -1,4 +1,8 @@
 .DaysForecast {
   padding: 15px;
   border: 2px solid white;
+  margin: 20px auto;
+}
+h5 {
+  font-weight: 800;
 }

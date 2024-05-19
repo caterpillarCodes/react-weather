@@ -16,7 +16,7 @@ export default function GeneralInformation() {
           size={90}
           animate={true}
         />
-        <p className="current-situation-text">Mostly cloudy</p>
+        <p className="current-situation">Mostly cloudy</p>
       </div>
       <div className="col">
         <p className="current-temperature">
@@ -26,7 +26,7 @@ export default function GeneralInformation() {
           <p>
             <WiHumidity /> <span id="humidity"></span>%
           </p>
-          <p>
+          <p className="wind">
             <WiStrongWind />
             <span id="wind"></span> km/h
           </p>
