@@ -4,11 +4,11 @@ import { WiHumidity } from "react-icons/wi";
 import { WiStrongWind } from "react-icons/wi";
 import "./GeneralInformation.css";
 
-export default function GeneralInformation() {
+export default function GeneralInformation(props) {
   return (
     <div className="GeneralInformation">
       <div className="col">
-        <p className="current-city">Berlin</p>
+        <p className="current-city">{props.city}</p>
         <p className="current-date">Wednesday 16:08 | AUG 18</p>
         <ReactAnimatedWeather
           icon="CLEAR_DAY"

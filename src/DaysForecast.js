@@ -11,7 +11,7 @@ export default function DaysForecast() {
         size={40}
         animate={true}
       />
-      <p class="next-day-situation">few clouds</p>
+      <p className="next-day-situation">few clouds</p>
       <span className="temperature-max">15º</span>
       <span className="temperature-min">4º</span>
     </div>
